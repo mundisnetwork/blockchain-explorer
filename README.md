@@ -1,7 +1,3 @@
-<p align="center">
-    <img alt="Mundis" src="https://i.imgur.com/IKyzQ6T.png" width="250" />
-</p>
-
 # Mundis Blockchain Explorer
 
 ## Development
