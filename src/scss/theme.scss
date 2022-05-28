@@ -1,0 +1,30 @@
+/**
+ * Dashkit
+ *
+ * Custom variables followed by Dashkit variables followed by Bootstrap variables
+ * to ensure cascade of styles.
+ */
+
+$path-to-img: "/img/dashkit" !default;
+$path-to-fonts: "/fonts" !default;
+
+// Icon font
+@import "../fonts/feather/feather";
+
+// Bootstrap functions
+@import '~bootstrap/scss/functions';
+
+// Custom variables
+@import 'mundis-variables';
+
+// Dashkit variables
+@import 'dashkit/variables';
+
+// Bootstrap core
+@import '~bootstrap/scss/bootstrap';
+
+// Dashkit core
+@import 'dashkit/theme';
+
+// Custom core
+@import 'mundis';

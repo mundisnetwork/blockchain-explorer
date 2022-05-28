@@ -1,0 +1,15 @@
+<svg width="464" height="150" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient y2="0.43272" x2="0.84316" y1="0.72117" x1="0.04226" id="svg_2">
+   <stop stop-color="#29ABE2" offset="0"/>
+   <stop stop-opacity="0.3" stop-color="#29ABE2" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <path fill="#FFE922" d="m131.56108,6.74867l-66.9,-7.9c-14.7,-1.8 -28.2,8.9 -30,23.6l-7.9,66.9c-1.8,14.7 8.9,28.2 23.6,30l66.9,7.9c14.7,1.8 28.2,-8.9 30,-23.6l7.9,-66.9c1.8,-14.7 -8.8,-28.2 -23.6,-30z" class="st0" id="svg_1"/>
+  <path fill="#67C3EA" d="m172.66108,118.84867l-24.8,-19.6l-0.5,4.4c-1.8,14.7 -15.2,25.4 -30,23.6l-66.9,-7.9c-9.9,-1.2 -18,-7.7 -21.7,-16.3l-21.9,16.7c-10.8,8.6 -5.6,27.3 7.6,27.4l151.2,0.2c14.3,0.1 19.4,-21 7,-28.5z" class="st1" id="svg_3"/>
+  <path fill="url(#svg_2)" d="m50.36108,119.34867l66.9,7.9c14.7,1.8 28.2,-8.9 30,-23.6l0.5,-4.4l-49.7,-39.2c-4.6,-2.8 -10.2,-2.3 -14.5,1.1l-54.9,41.9c3.7,8.6 11.8,15.1 21.7,16.3z" class="st2" id="svg_5"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Open Sans'" font-size="50" stroke-width="0" id="svg_4" y="95" x="227" fill="#000000" font-weight="normal">MUNDIS</text>
+ </g>
+</svg>
