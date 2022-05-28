@@ -39,7 +39,7 @@ export function AccountBalanceRow({ account }: AccountProps) {
   const { lamports } = account;
   return (
     <tr>
-      <td>Balance (SOL)</td>
+      <td>Balance (MUNDIS)</td>
       <td className="text-lg-end text-uppercase">
         <MundisBalance lamports={lamports} />
       </td>

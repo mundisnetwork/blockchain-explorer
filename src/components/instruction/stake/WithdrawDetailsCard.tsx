@@ -57,7 +57,7 @@ export function WithdrawDetailsCard(props: {
       </tr>
 
       <tr>
-        <td>Withdraw Amount (SOL)</td>
+        <td>Withdraw Amount (MUNDIS)</td>
         <td className="text-lg-end">
           <MundisBalance lamports={info.lamports} />
         </td>

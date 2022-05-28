@@ -67,7 +67,7 @@ export function CreateWithSeedDetailsCard(props: {
       </tr>
 
       <tr>
-        <td>Transfer Amount (SOL)</td>
+        <td>Transfer Amount (MUNDIS)</td>
         <td className="text-lg-end">
           <MundisBalance lamports={info.lamports} />
         </td>

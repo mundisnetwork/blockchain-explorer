@@ -124,13 +124,13 @@ function OverviewCard({
           </td>
         </tr>
         <tr>
-          <td>Balance (SOL)</td>
+          <td>Balance (MUNDIS)</td>
           <td className="text-lg-end text-uppercase">
             <MundisBalance lamports={account.lamports || 0} />
           </td>
         </tr>
         <tr>
-          <td>Rent Reserve (SOL)</td>
+          <td>Rent Reserve (MUNDIS)</td>
           <td className="text-lg-end">
             <MundisBalance lamports={stakeAccount.meta.rentExemptReserve} />
           </td>
@@ -189,7 +189,7 @@ function DelegationCard({
         {stake && (
           <>
             <tr>
-              <td>Delegated Stake (SOL)</td>
+              <td>Delegated Stake (MUNDIS)</td>
               <td className="text-lg-end">
                 <MundisBalance lamports={stake.delegation.stake} />
               </td>
@@ -198,14 +198,14 @@ function DelegationCard({
             {activation && (
               <>
                 <tr>
-                  <td>Active Stake (SOL)</td>
+                  <td>Active Stake (MUNDIS)</td>
                   <td className="text-lg-end">
                     <MundisBalance lamports={activation.active} />
                   </td>
                 </tr>
 
                 <tr>
-                  <td>Inactive Stake (SOL)</td>
+                  <td>Inactive Stake (MUNDIS)</td>
                   <td className="text-lg-end">
                     <MundisBalance lamports={activation.inactive} />
                   </td>

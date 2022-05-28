@@ -57,7 +57,7 @@ export function SplitDetailsCard(props: {
       </tr>
 
       <tr>
-        <td>Split Amount (SOL)</td>
+        <td>Split Amount (MUNDIS)</td>
         <td className="text-lg-end">
           <MundisBalance lamports={info.lamports} />
         </td>

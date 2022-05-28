@@ -94,7 +94,7 @@ function AccountInfo({
       {ownerAddress
         ? `Owned by ${
             ownerLabel || ownerAddress
-          }. Balance is ${lamportsToMundisString(info.data.lamports)} SOL`
+          }. Balance is ${lamportsToMundisString(info.data.lamports)} MUNDIS`
         : "Account doesn't exist"}
     </span>
   );
