@@ -5,11 +5,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 body{
    font-family: 'Open Sans', sans-serif;
+    background:url(../img/ui/bluePoly.svg) no-repeat top right;
+}
+.circleBg{
+    background:url(../img/ui/footerCircle.svg) no-repeat bottom left;
+    padding-bottom:20rem;
 }
 svg{
     text{
         font-family: 'Open Sans', sans-serif!important;
     }
+}
+.navbar{
+    background:transparent;
 }
 code,
 pre {
@@ -376,37 +384,6 @@ pre.json-wrap {
 pre.json-wrap {
   max-width: 36rem;
 }
-
-.staking-card {
-  .card-header-title {
-    font-weight: bold;
-  }
-
-  h1 {
-    margin-bottom: 0.75rem;
-    small {
-      font-size: 1rem;
-    }
-  }
-  h5 {
-    margin-bottom: 0;
-  }
-  em {
-    font-style: normal;
-    color: $primary;
-  }
-}
-
-.status-card {
-  .card-header-title {
-    font-weight: bold;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-}
-
 p.updated-time {
   position: absolute;
   font-size: 0.66rem;
@@ -480,7 +457,6 @@ p.updated-time {
   }
 }
 //Footer Styles
-
 .footer{
     background:#2A2A2A;
     color:#606060;
@@ -499,8 +475,109 @@ p.updated-time {
         }
     }
 }
-//basics
+//card styles
 
+.card{
+    border-radius:30px;
+    box-shadow:none!important;
+    border:none!important;
+    .card-body {
+        border-radius:50px;
+        padding:2.5rem;
+         &.status-card {
+            background:#CAEAF8;
+            .card-header-title{
+                width: fit-content;
+                background:url(../img/ui/liveCluster.svg) no-repeat right center;
+                padding-right: 4rem;
+            }
+         }
+            .card-header-title {
+                font-weight: bold;
+            }
+
+            h4 {
+             font-size: 0.875rem;
+             color:$darkGrey;
+            }
+            .font-size-tiny.me-2{
+                display:none;
+            }
+            a{
+               font-size:1.563rem;
+               font-weight:700;
+               color: $primary;
+            }
+            h1 {
+                margin-bottom: 0.75rem;
+                color:$textGrey;
+                em {
+                    font-style: normal;
+                    color: $primary;
+                    font-weight:700;
+                    font-size:1.5rem;
+                }
+                small {
+                  font-size: 1.125rem;
+                }
+        }
+        h5 {
+            margin-bottom: 0;
+            color:$textGrey;
+            em{
+                color:$green;
+                font-weight:700;
+                font-style:normal;
+            }
+        }
+        p{
+            span{
+                color:$green;
+                font-weight:700;
+                font-style:normal;
+            }
+        }
+        .col-4{
+            .font-monospace{
+                font-style: normal;
+                color: $primary;
+                font-weight:700;
+                font-size:1.5rem;
+            }
+        }
+    }
+}
+.staking-card{
+    .col-12{
+        &:first-child{
+            .card{
+                .card-body{
+                    background:#F9B7F0;
+                    .card-header-title{
+                        background:url(../img/ui/activeStake.svg) no-repeat right center;
+                        width: fit-content;
+                        padding-right: 4rem;
+                    }
+                }
+            }
+        }
+        &:last-child{
+            .card{
+                .card-body{
+                    background:#FFF8BC;
+                  .card-header-title{
+                        background:url(../img/ui/circulatingSupply.svg) no-repeat right center;
+                        padding-right: 4rem;
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//basics
 .text-right{
     text-align:right!important;
 }

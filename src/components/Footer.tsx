@@ -7,7 +7,10 @@ import { clusterPath } from "utils/url";
 import { Link, NavLink } from "react-router-dom";
 import { ClusterStatusButton } from "components/ClusterStatusButton";
 
+
+
 export function Footer() {
+
     return (
         <footer className="footer py-5">
             <div className="container">
