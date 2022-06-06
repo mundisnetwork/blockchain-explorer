@@ -104,15 +104,13 @@ export function programLabel(
   return LOADER_IDS[address];
 }
 
-export function tokenLabel(
-  address: string,
-): string | undefined {
+export function tokenLabel(address: string): string | undefined {
   return `Unknown token`;
 }
 
 export function addressLabel(
   address: string,
-  cluster: Cluster,
+  cluster: Cluster
 ): string | undefined {
   return (
     programLabel(address, cluster) ||
@@ -122,10 +120,7 @@ export function addressLabel(
   );
 }
 
-export function displayAddress(
-  address: string,
-  cluster: Cluster,
-): string {
+export function displayAddress(address: string, cluster: Cluster): string {
   return addressLabel(address, cluster) || address;
 }
 

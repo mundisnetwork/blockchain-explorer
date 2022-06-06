@@ -58,9 +58,8 @@ export function InstructionsSection({ signature }: SignatureProps) {
   } = {};
 
   if (
-    meta?.innerInstructions &&
-    (// cluster !== Cluster.Mainnet ||
-      details.data.transaction.slot >= INNER_INSTRUCTIONS_START_SLOT)
+    meta?.innerInstructions && // cluster !== Cluster.Mainnet ||
+    details.data.transaction.slot >= INNER_INSTRUCTIONS_START_SLOT
   ) {
     meta.innerInstructions.forEach((parsed: ParsedInnerInstruction) => {
       if (!innerInstructions[parsed.index]) {

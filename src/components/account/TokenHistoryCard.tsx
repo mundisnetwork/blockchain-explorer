@@ -415,9 +415,8 @@ const TokenTransactionRow = React.memo(
           )[] = [];
 
           if (
-            transaction.meta?.innerInstructions &&
-            ( // cluster !== Cluster.Mainnet ||
-              transaction.slot >= INNER_INSTRUCTIONS_START_SLOT)
+            transaction.meta?.innerInstructions && // cluster !== Cluster.Mainnet ||
+            transaction.slot >= INNER_INSTRUCTIONS_START_SLOT
           ) {
             transaction.meta.innerInstructions.forEach((ix) => {
               if (ix.index === index) {
@@ -541,10 +540,7 @@ function InstructionDetails({
   );
 }
 
-function formatTokenName(
-  pubkey: string,
-  cluster: Cluster,
-): string {
+function formatTokenName(pubkey: string, cluster: Cluster): string {
   let display = displayAddress(pubkey, cluster);
 
   if (display === pubkey) {

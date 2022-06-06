@@ -60,9 +60,7 @@ export function TokenBalancesCard({ signature }: SignatureProps) {
         <td>
           <BalanceDelta delta={delta} />
         </td>
-        <td>
-          {balance.uiAmountString}
-        </td>
+        <td>{balance.uiAmountString}</td>
       </tr>
     );
   });

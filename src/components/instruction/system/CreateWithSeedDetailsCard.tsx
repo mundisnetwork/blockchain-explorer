@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  SystemProgram,
-  SignatureResult,
-  ParsedInstruction,
-} from "@mundis/sdk";
+import { SystemProgram, SignatureResult, ParsedInstruction } from "@mundis/sdk";
 import { MundisBalance } from "utils";
 import { InstructionCard } from "../InstructionCard";
 import { Copyable } from "components/common/Copyable";

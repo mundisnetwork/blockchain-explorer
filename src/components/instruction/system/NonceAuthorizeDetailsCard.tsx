@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  SystemProgram,
-  SignatureResult,
-  ParsedInstruction,
-} from "@mundis/sdk";
+import { SystemProgram, SignatureResult, ParsedInstruction } from "@mundis/sdk";
 import { InstructionCard } from "../InstructionCard";
 import { Address } from "components/common/Address";
 import { AuthorizeNonceInfo } from "./types";

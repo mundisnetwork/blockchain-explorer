@@ -104,9 +104,7 @@ function HoldingsDetailTable({ tokens }: { tokens: TokenInfoWithPubkey[] }) {
         <td>
           <Address pubkey={tokenAccount.info.mint} link truncate />
         </td>
-        <td>
-          {tokenAccount.info.tokenAmount.uiAmountString}{" "}
-        </td>
+        <td>{tokenAccount.info.tokenAmount.uiAmountString} </td>
       </tr>
     );
   });
@@ -150,9 +148,7 @@ function HoldingsSummaryTable({ tokens }: { tokens: TokenInfoWithPubkey[] }) {
         <td>
           <Address pubkey={new PublicKey(mintAddress)} link useMetadata />
         </td>
-        <td>
-          {totalByMint}
-        </td>
+        <td>{totalByMint}</td>
       </tr>
     );
   });

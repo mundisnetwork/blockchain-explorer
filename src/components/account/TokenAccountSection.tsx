@@ -1,7 +1,4 @@
-import {
-  Account,
-  useFetchAccountInfo,
-} from "providers/accounts";
+import { Account, useFetchAccountInfo } from "providers/accounts";
 import {
   TokenAccount,
   MintAccountInfo,
@@ -82,11 +79,11 @@ function FungibleTokenMintAccountCard({
   const refresh = () => fetchInfo(account.pubkey);
   const tokenInfo = {
     extensions: {
-      bridgeContract: '',
-      assetContract: '',
-      coingeckoId: '',
-      website: ''
-    }
+      bridgeContract: "",
+      assetContract: "",
+      coingeckoId: "",
+      website: "",
+    },
   };
 
   const bridgeContractAddress = getEthAddress(

@@ -66,7 +66,7 @@ export function MessageBanner() {
         <div className="d-flex flex-column align-items-center justify-content-center text-center py-3">
           <h3 className="mb-0 line-height-md">
             <span className="fe fe-alert-circle me-2"></span>
-            <span dangerouslySetInnerHTML={{__html: message}}/>
+            <span dangerouslySetInnerHTML={{ __html: message }} />
           </h3>
           {timeframe}
         </div>

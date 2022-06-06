@@ -30,16 +30,11 @@ export function Address({
   const address = pubkey.toBase58();
   const { cluster } = useCluster();
 
-  if (
-    truncateUnknown &&
-    address === displayAddress(address, cluster)
-  ) {
+  if (truncateUnknown && address === displayAddress(address, cluster)) {
     truncate = true;
   }
 
-  let addressLabel = raw
-    ? address
-    : displayAddress(address, cluster);
+  let addressLabel = raw ? address : displayAddress(address, cluster);
 
   if (truncateChars && addressLabel === address) {
     addressLabel = addressLabel.slice(0, truncateChars) + "…";

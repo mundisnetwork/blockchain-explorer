@@ -44,10 +44,7 @@ export function TokenTransfersCard({ pubkey }: { pubkey: PublicKey }) {
   const refresh = () => fetchAccountHistory(pubkey, true, true);
   const loadMore = () => fetchAccountHistory(pubkey, true);
 
-  const mintDetails = React.useMemo(
-    () => address,
-    [address]
-  );
+  const mintDetails = React.useMemo(() => address, [address]);
 
   const transactionRows = React.useMemo(() => {
     if (history?.data?.fetched) {
@@ -128,7 +125,6 @@ export function TokenTransfersCard({ pubkey }: { pubkey: PublicKey }) {
         transfers.forEach(({ transfer, index, childIndex }) => {
           let units = "Tokens";
           let amountString = "";
-
 
           if ("tokenAmount" in transfer) {
             amountString = transfer.tokenAmount.uiAmountString;

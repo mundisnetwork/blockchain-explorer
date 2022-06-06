@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  SignatureResult,
-  StakeProgram,
-  ParsedInstruction,
-} from "@mundis/sdk";
+import { SignatureResult, StakeProgram, ParsedInstruction } from "@mundis/sdk";
 import { InstructionCard } from "../InstructionCard";
 import { Address } from "components/common/Address";
 import { DeactivateInfo } from "./types";

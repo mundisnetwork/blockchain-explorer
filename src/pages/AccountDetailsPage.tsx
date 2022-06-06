@@ -164,18 +164,16 @@ export function AccountHeader({
         <div className="col-auto">
           <div className="avatar avatar-lg header-avatar-top">
             <Identicon
-                address={address}
-                className="avatar-img rounded-circle border border-body identicon-wrapper"
-                style={{ width: IDENTICON_WIDTH }}
+              address={address}
+              className="avatar-img rounded-circle border border-body identicon-wrapper"
+              style={{ width: IDENTICON_WIDTH }}
             />
           </div>
         </div>
 
         <div className="col mb-3 ms-n3 ms-md-n2">
           <h6 className="header-pretitle">Token</h6>
-          <h2 className="header-title">
-            {"Unknown Token"}
-          </h2>
+          <h2 className="header-title">{"Unknown Token"}</h2>
         </div>
       </div>
     );
@@ -240,7 +238,7 @@ function DetailsSections({
 function InfoSection({ account }: { account: Account }) {
   const data = account?.details?.data;
 
- if (data && data.program === "stake") {
+  if (data && data.program === "stake") {
     return (
       <StakeAccountSection
         account={account}

@@ -96,54 +96,51 @@ function StakingComponent() {
 
   return (
     <div className="row staking-card">
-
       <div className="col-12 col-lg-4 col-xl">
         <div className="card">
           <div className="card-body">
-              <div className="row no-gutters">
-                <div className="col-6">
-                    <h4 className="card-header-title">Active Stake</h4>
-                </div>
-                <div className="col-6">
-                    {activeStake && (
-                    <h1>
-                      <em>{displayLamports(activeStake)}</em> /{" "}
-                      <small>{displayLamports(supply.total)}</small>
-                    </h1>
-                    )}
+            <div className="row no-gutters">
+              <div className="col-6">
+                <h4 className="card-header-title">Active Stake</h4>
+              </div>
+              <div className="col-6">
+                {activeStake && (
+                  <h1>
+                    <em>{displayLamports(activeStake)}</em> /{" "}
+                    <small>{displayLamports(supply.total)}</small>
+                  </h1>
+                )}
 
-                    {delinquentStakePercentage && (
-                    <h5>
-                      Delinquent stake: <em>{delinquentStakePercentage}%</em>
-                    </h5>
-                    )}
-                </div>
+                {delinquentStakePercentage && (
+                  <h5>
+                    Delinquent stake: <em>{delinquentStakePercentage}%</em>
+                  </h5>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    <div className="col-12 col-lg-4 col-xl">
-      <div className="card">
-        <div className="card-body">
+      <div className="col-12 col-lg-4 col-xl">
+        <div className="card">
+          <div className="card-body">
             <div className="row no-gutters">
-                <div className="col-6">
-                    <h4 className="card-header-title">Circulating Supply</h4>
-                </div>
-                <div className="col-6">
-                   <h1>
-                    <em>{displayLamports(supply.circulating)}</em> /{" "}
-                    <small>{displayLamports(supply.total)}</small>
-                  </h1>
-                    <h5>
-                       <em>{circulatingPercentage}%</em> is circulating
-                    </h5>
-                </div>
+              <div className="col-6">
+                <h4 className="card-header-title">Circulating Supply</h4>
+              </div>
+              <div className="col-6">
+                <h1>
+                  <em>{displayLamports(supply.circulating)}</em> /{" "}
+                  <small>{displayLamports(supply.total)}</small>
+                </h1>
+                <h5>
+                  <em>{circulatingPercentage}%</em> is circulating
+                </h5>
+              </div>
             </div>
+          </div>
         </div>
       </div>
-    </div>
-
-
     </div>
   );
 }
@@ -186,33 +183,41 @@ function StatsCardBody() {
   const { blockHeight, absoluteSlot } = epochInfo;
 
   return (
-      <div className="card-body status-card">
-        <h4 className="card-header-title">Live Cluster Stats</h4>
-        {blockTime && (
-            <h5 className="mt-2">Cluster time: {displayTimestampUtc(blockTime, true)}</h5>
-        )}
+    <div className="card-body status-card">
+      <h4 className="card-header-title">Live Cluster Stats</h4>
+      {blockTime && (
+        <h5 className="mt-2">
+          Cluster time: {displayTimestampUtc(blockTime, true)}
+        </h5>
+      )}
 
-        <div className="row mt-4">
-          <div className="col-4">
-            <h4>Epoch</h4>
-            <Epoch epoch={epochInfo.epoch} link />
-            <p className="my-0"><span>{epochProgress}</span> complete</p>
-            <p className="my-0"><span>~{epochTimeRemaining}</span> remaining</p>
-          </div>
-          <div className="col-4">
-            <h4>Slot</h4>
-            <Slot slot={absoluteSlot} link />
-            <p className="my-0">Slot time (1min average): <span>{averageSlotTime}ms</span></p>
-            <p className="my-0">Slot time (1hr average): <span>{hourlySlotTime}ms</span></p>
-          </div>
-          <div className="col-4">
-            <h4>Block height</h4>
-            {blockHeight !== undefined && (
-              <Slot slot={blockHeight} />
-            )}
-          </div>
+      <div className="row mt-4">
+        <div className="col-4">
+          <h4>Epoch</h4>
+          <Epoch epoch={epochInfo.epoch} link />
+          <p className="my-0">
+            <span>{epochProgress}</span> complete
+          </p>
+          <p className="my-0">
+            <span>~{epochTimeRemaining}</span> remaining
+          </p>
+        </div>
+        <div className="col-4">
+          <h4>Slot</h4>
+          <Slot slot={absoluteSlot} link />
+          <p className="my-0">
+            Slot time (1min average): <span>{averageSlotTime}ms</span>
+          </p>
+          <p className="my-0">
+            Slot time (1hr average): <span>{hourlySlotTime}ms</span>
+          </p>
+        </div>
+        <div className="col-4">
+          <h4>Block height</h4>
+          {blockHeight !== undefined && <Slot slot={blockHeight} />}
         </div>
       </div>
+    </div>
   );
 }
 
