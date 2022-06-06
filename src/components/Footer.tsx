@@ -2,12 +2,9 @@ import React from "react";
 import FooterLogo from "img/logos/FooterLogo.svg";
 import Discord from "img/logos/discord.png";
 import Twitter from "img/logos/twitter.png";
-import Medium from "img/logos/medium.png";
-import { clusterPath } from "utils/url";
-import { Link, NavLink } from "react-router-dom";
-import { ClusterStatusButton } from "components/ClusterStatusButton";
-
-
+import Telegram from "img/logos/telegram.png";
+import Github from "img/logos/github.png";
+import {Link} from "react-router-dom";
 
 export function Footer() {
 
@@ -32,11 +29,11 @@ export function Footer() {
                         </li>
                         <li>
                              <Link
-                                  to={{ pathname: "https://blog.mundis.io/" }}
+                                  to={{ pathname: "https://t.me/mundisnetwork" }}
                                   target='_blank'
-                                  aria-label='Medium'
+                                  aria-label='Telegram'
                                   >
-                                <img src={Medium} alt="Mundis Blockchain Explorer: Medium" />
+                                <img src={Telegram} alt="Mundis Blockchain Explorer: Telegram" />
                             </Link>
                         </li>
                         <li>
@@ -48,13 +45,22 @@ export function Footer() {
                                 <img src={Twitter} alt="Mundis Blockchain Explorer: Twitter" />
                             </Link>
                         </li>
+                          <li>
+                              <Link
+                                  to={{ pathname: "https://github.com/mundisnetwork/blockchain-explorer" }}
+                                  target='_blank'
+                                  aria-label='Github'
+                              >
+                                  <img src={Github} alt="Mundis Blockchain Explorer: Github" />
+                              </Link>
+                          </li>
                       </ul>
                     </div>
                     <div className="col-6 border-top pt-4">
-                       <p>Copyright (c) 2022 Mundis Foundation. All rights reserved.</p>
+                       <p>Copyright (c) 2022 Metaverse Labs. All rights reserved.</p>
                     </div>
                     <div className="col-6 border-top pt-4">
-                        <p className="text-right">info@mundis.io</p>
+                        <p className="text-right">maintainers@mundis.io</p>
                     </div>
                 </div>
             </div>
