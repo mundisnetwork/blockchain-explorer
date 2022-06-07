@@ -202,7 +202,7 @@ function StatusCard({
   })();
 
   return (
-    <div className="card">
+    <div className="card greyCard">
       <div className="card-header align-items-center">
         <h3 className="card-header-title">Overview</h3>
         <Link
@@ -396,7 +396,7 @@ function AccountsCard({ signature }: SignatureProps) {
   });
 
   return (
-    <div className="card">
+    <div className="card greyCard">
       <div className="card-header">
         <h3 className="card-header-title">Account Input(s)</h3>
       </div>
