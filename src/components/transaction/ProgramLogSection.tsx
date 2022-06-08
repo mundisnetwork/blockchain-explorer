@@ -19,7 +19,7 @@ export function ProgramLogSection({ signature }: SignatureProps) {
 
   return (
     <>
-      <div className="card">
+      <div className="card greyCard">
         <div className="card-header">
           <h3 className="card-header-title">Program Logs</h3>
         </div>

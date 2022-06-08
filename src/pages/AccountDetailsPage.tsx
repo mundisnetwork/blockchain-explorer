@@ -305,7 +305,7 @@ function MoreSection({
   const data = account?.details?.data;
   return (
     <>
-      <div className="container greyCard">
+      <div className="container greyCard tableSpecificStyle ">
         <div className="header">
           <div className="header-body pt-0">
             <ul className="nav nav-tabs nav-overflow header-tabs">
