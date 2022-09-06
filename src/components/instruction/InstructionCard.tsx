@@ -56,7 +56,7 @@ export function InstructionCard({
   };
 
   return (
-    <div className="card">
+    <div className="card greyCard">
       <div className="card-header">
         <h3 className="card-header-title mb-0 d-flex align-items-center">
           <span className={`badge bg-${resultClass}-soft me-2`}>

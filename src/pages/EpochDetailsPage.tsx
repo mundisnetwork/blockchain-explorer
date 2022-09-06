@@ -9,9 +9,11 @@ import { Slot } from "components/common/Slot";
 import { useEpoch, useFetchEpoch } from "providers/epoch";
 import { displayTimestampUtc } from "utils/date";
 import { FetchStatus } from "providers/cache";
+import { useHistory } from "react-router-dom";
 
 type Props = { epoch: string };
 export function EpochDetailsPage({ epoch }: Props) {
+  let history = useHistory();
   let output;
   if (isNaN(Number(epoch))) {
     output = <ErrorCard text={`Epoch ${epoch} is not valid`} />;
@@ -22,9 +24,15 @@ export function EpochDetailsPage({ epoch }: Props) {
   return (
     <div className="container mt-n3">
       <div className="header">
-        <div className="header-body">
-          <h6 className="header-pretitle">Details</h6>
-          <h2 className="header-title">Epoch</h2>
+          <>
+              <button className="backButton btn btn-white" onClick={() => history.goBack()}>Back</button>
+          </>
+        <div className="header-body d-flex">
+            <div>
+               <h6 className="header-pretitle">Details</h6>
+                <h2 className="header-title">Epoch</h2>
+            </div>
+          <div className="icon epoch ml-5"></div>
         </div>
       </div>
       {output}

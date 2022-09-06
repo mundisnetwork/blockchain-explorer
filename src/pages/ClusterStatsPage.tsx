@@ -96,7 +96,7 @@ function StakingComponent() {
 
   return (
     <div className="row staking-card">
-      <div className="col-12 col-lg-4 col-xl">
+      <div className="col-12 col-lg-6 col-xl">
         <div className="card">
           <div className="card-body">
             <div className="row no-gutters">
@@ -121,7 +121,7 @@ function StakingComponent() {
           </div>
         </div>
       </div>
-      <div className="col-12 col-lg-4 col-xl">
+      <div className="col-12 col-lg-6 col-xl">
         <div className="card">
           <div className="card-body">
             <div className="row no-gutters">
@@ -192,7 +192,7 @@ function StatsCardBody() {
       )}
 
       <div className="row mt-4">
-        <div className="col-4">
+        <div className="col-xl-4 col-lg-6 col-sm-6 col-12">
           <h4>Epoch</h4>
           <Epoch epoch={epochInfo.epoch} link />
           <p className="my-0">
@@ -202,7 +202,7 @@ function StatsCardBody() {
             <span>~{epochTimeRemaining}</span> remaining
           </p>
         </div>
-        <div className="col-4">
+        <div className="col-xl-4 col-lg-6 col-sm-6 col-12 mt-sm-0 mt-5">
           <h4>Slot</h4>
           <Slot slot={absoluteSlot} link />
           <p className="my-0">
@@ -212,7 +212,7 @@ function StatsCardBody() {
             Slot time (1hr average): <span>{hourlySlotTime}ms</span>
           </p>
         </div>
-        <div className="col-4">
+        <div className="col-xl-4 col-lg-6 col-sm-6 col-12 mt-xl-0 mt-5">
           <h4>Block height</h4>
           {blockHeight !== undefined && <Slot slot={blockHeight} />}
         </div>

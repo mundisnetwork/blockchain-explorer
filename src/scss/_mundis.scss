@@ -3,27 +3,56 @@
 // Use this to write your custom SCSS
 //
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  background: url(../img/ui/bluePoly.svg) no-repeat top right;
+body{
+   font-family: 'Open Sans', sans-serif;
+    background:url(../img/ui/bluePoly.svg) no-repeat top right;
 }
-
-.circleBg {
-  background: url(../img/ui/footerCircle.svg) no-repeat bottom left;
-  padding-bottom: 20rem;
+.circleBg{
+    background:url(../img/ui/footerCircle.svg) no-repeat bottom left;
+    padding-bottom:20rem;
 }
-
-svg {
-  text {
-    font-family: 'Open Sans', sans-serif !important;
-  }
+.navBtn{
+    background:#fff;
+    border:1px solid #F0902F!important;
+    color:$darkGrey!important;
+    &:hover{
+        background:#F0902F;
+        color:#fff!important;
+    }
+    &.btn-primary{
+        color:$darkGrey!important;
+        font-weight:bold!important;
+        &:hover{
+            color:#fff!important;
+        }
+    }
 }
-
-.navbar {
-  background: transparent;
+.navbar-nav{
+    .nav-item{
+        .nav-link{
+            color:$darkGrey!important;
+            font-size:1rem;
+            font-weight:bold!important;
+            &:hover{
+                color:$info!important;
+            }
+            &.active{
+            color:$info!important;
+                &:before{
+                    border:none;
+                }
+            }
+        }
+    }
 }
-
+svg{
+    text{
+        font-family: 'Open Sans', sans-serif!important;
+    }
+}
+.navbar{
+    background:transparent;
+}
 code,
 pre {
   padding: 0.33rem;
@@ -49,7 +78,7 @@ ul.log-messages {
   overflow: auto;
   font-size: 0.8125rem;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-  "Courier New", monospace;
+    "Courier New", monospace;
 }
 
 .popover-container {
@@ -315,7 +344,6 @@ div.inner-cards {
 // work around for https://github.com/JedWatson/react-select/issues/3857
 .search-bar__input {
   width: 100% !important;
-
   input {
     width: 100% !important;
   }
@@ -390,7 +418,6 @@ pre.json-wrap {
 pre.json-wrap {
   max-width: 36rem;
 }
-
 p.updated-time {
   position: absolute;
   font-size: 0.66rem;
@@ -450,7 +477,6 @@ p.updated-time {
 
 .bg-info {
   color: white;
-
   a {
     color: white;
     text-decoration: underline;
@@ -464,159 +490,324 @@ p.updated-time {
     font-size: 2.5rem;
   }
 }
-
 //Footer Styles
-.footer {
-  background: #2A2A2A;
-  color: #d7d7d7;
-
-  .border-top {
-    border-color: #606060 !important;
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-
-    li {
-      margin-right: 1rem;
-
-      img {
-        height: 25px;
-      }
-
-      &:last-child {
-        margin: 0;
-      }
+.footer{
+    background:#2A2A2A;
+    color:#606060;
+    .border-top{
+        border-color:#606060!important;
     }
-  }
+    ul{
+        list-style:none;
+        display:flex;
+        align-items: center;
+        li{
+            margin-right:1rem;
+            img{
+                width:25px;
+            }
+            &:last-child{
+                margin:0;
+            }
+        }
+    }
 }
-
 //card styles
 
-.card {
-  border-radius: 30px;
-  box-shadow: none !important;
-  border: none !important;
+.card{
+    border-radius:30px;
+    box-shadow:none!important;
+    border:none!important;
+    .card-body {
+        border-radius:50px;
+        padding:2.5rem;
+         &.status-card {
+            background:#CAEAF8;
+            .card-header-title{
+                width: fit-content;
+                background:url(../img/ui/liveCluster.svg) no-repeat right center;
+                padding-right: 4rem;
+            }
+         }
+            .card-header-title {
+                font-weight: bold;
+            }
 
-  .card-body {
-    border-radius: 50px;
-    padding: 2.5rem;
-
-    &.status-card {
-      background: #CAEAF8;
-
-      .card-header-title {
-        width: fit-content;
-        background: url(../img/ui/liveCluster.svg) no-repeat right center;
-        padding-right: 4rem;
-      }
+            h4 {
+             font-size: 0.875rem;
+             color:$darkGrey;
+            }
+            .font-size-tiny.me-2{
+                font-size:14px;
+            }
+            a{
+               font-size:1.563rem;
+               font-weight:700;
+               color: $primary;
+            }
+            h1 {
+                margin-bottom: 0.75rem;
+                color:$textGrey;
+                em {
+                    font-style: normal;
+                    color: $primary;
+                    font-weight:700;
+                    font-size:1.5rem;
+                }
+                small {
+                  font-size: 1.125rem;
+                }
+        }
+        h5 {
+            margin-bottom: 0;
+            color:$textGrey;
+            em{
+                color:$green;
+                font-weight:700;
+                font-style:normal;
+            }
+        }
+        p{
+            span{
+                color:$green;
+                font-weight:700;
+                font-style:normal;
+            }
+        }
+        .col-4{
+            .font-monospace{
+                font-style: normal;
+                color: $primary;
+                font-weight:700;
+                font-size:1.5rem;
+            }
+        }
     }
-
-    .card-header-title {
-      font-weight: bold;
-    }
-
-    h4 {
-      font-size: 0.875rem;
-      color: $darkGrey;
-    }
-
-    .font-size-tiny.me-2 {
-      display: none;
-    }
-
-    a {
-      font-size: 1.563rem;
-      font-weight: 700;
-      color: $primary;
-    }
-
-    h1 {
-      margin-bottom: 0.75rem;
-      color: $textGrey;
-
-      em {
-        font-style: normal;
-        color: $primary;
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
-
-      small {
-        font-size: 1.125rem;
-      }
-    }
-
-    h5 {
-      margin-bottom: 0;
-      color: $textGrey;
-
-      em {
-        color: $green;
-        font-weight: 700;
-        font-style: normal;
-      }
-    }
-
-    p {
-      span {
-        color: $green;
-        font-weight: 700;
-        font-style: normal;
-      }
-    }
-
-    .col-4 {
-      .font-monospace {
-        font-style: normal;
-        color: $primary;
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
-    }
-  }
 }
-
-.staking-card {
-  .col-12 {
-    &:first-child {
-      .card {
-        .card-body {
-          background: #F9B7F0;
-
-          .card-header-title {
-            background: url(../img/ui/activeStake.svg) no-repeat right center;
-            width: fit-content;
-            padding-right: 4rem;
-          }
+.staking-card{
+    .col-12{
+        &:first-child{
+            .card{
+            background:none!important;
+                .card-body{
+                    background:#F9B7F0;
+                    .card-header-title{
+                        background:url(../img/ui/activeStake.svg) no-repeat right center;
+                        width: fit-content;
+                        padding-right: 4rem;
+                    }
+                }
+            }
         }
-      }
-    }
-
-    &:last-child {
-      .card {
-        .card-body {
-          background: #FFF8BC;
-
-          .card-header-title {
-            background: url(../img/ui/circulatingSupply.svg) no-repeat right center;
-            padding-right: 4rem;
-            width: fit-content;
-          }
+        &:last-child{
+            .card{
+            background:none!important;
+                .card-body{
+                    background:#FFF8BC;
+                  .card-header-title{
+                        background:url(../img/ui/circulatingSupply.svg) no-repeat right center;
+                        padding-right: 4rem;
+                        width: fit-content;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
 
 //basics
-.text-right {
-  text-align: right !important;
+.text-right{
+    text-align:right!important;
+}
+.ml-auto{
+    margin-left:auto!important;
+}
+.ml-5{
+    margin-left:2.5rem!important;
 }
 
-.ml-auto {
-  margin-left: auto !important;
+//search icon
+.fe.fe-search{
+    &:before{
+        color:$info;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+.css-1pahdxg-control{
+      border-color:#CCCCCC!important;
+      box-shadow:0 0 15px rgba(96, 96, 96, .2)!important;
+}
+//search icon
+.fe.fe-search{
+    &:before{
+        color:$info;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+.css-1pahdxg-control{
+      border-color:#CCCCCC!important;
+      box-shadow:0 0 15px rgba(96, 96, 96, .2)!important;
+}
+//block/epoch...
+.greyCard{
+    background:#FBFBFB;
+     box-shadow:0 0 15px rgba(96, 96, 96, .2)!important;
+     border-radius:20px;
+     padding:2rem;
+    .card{
+        background:#FBFBFB;
+    }
+    .header-body{
+        border:none!important;
+    }
+    .card-header-title{
+        font-size:1.5rem;
+        font-weight:bold;
+        margin-bottom:1rem;
+    }
+    .card-header{
+        padding:0!important;
+        .dropdown{
+            margin-bottom:2rem;
+            .btn{
+            padding:.5rem 1rem;
+            font-size:1.2rem;
+            font-weight:bold;
+
+            }
+        }
+    }
+    .nav-tabs{
+        border:none!important;
+        .nav-item{
+            .nav-link{
+                background:$lighterGrey;
+                padding:.5rem!important;
+                border-radius:10px;
+                text-transform:uppercase;
+                color:#fff;
+                font-weight:bold;
+                font-size:1rem;
+              &.active{
+                    color:#fff;
+                    background:$info;
+                    border:none;
+              }
+            }
+        }
+    }
+}
+//table styles
+.table{
+    thead{
+        th{
+         background:none!important;
+         color:#B8B8B8!important;
+        }
+    }
+   td{
+        &:first-child{
+            padding-left:0!important;
+        }
+        a{
+            color:$info!important;
+        }
+        .fe{
+            &:before{
+                color:$info!important;
+            }
+        }
+    }
+}
+.header-pretitle{
+    color:$info!important;
+}
+//buttons
+.btn{
+    &.btn-white{
+        color:$info;
+        border-color:$info;
+        &:hover{
+            background:#fff;
+        }
+        &:active{
+            background:#fff;
+        }
+        &:visited{
+            background:#fff;
+        }
+        &:hover{
+            color:#fff;
+            background:$info;
+        }
+    }
+    &.btn-sm{
+    }
+}
+
+//small text?
+
+.text-muted{
+    color:$info!important;
+}
+.text-success{
+    color:$info!important;
+}
+//tooltip
+.popover.bs-popover-top.show{
+    background:$info!important;
+    border-color:$info;
+}
+//form
+code{
+    background-color:rgba(103, 195, 234, 0.2)!important;
+}
+textarea::placeholder{
+        color:$info!important;
+}
+//details page img
+
+.icon{
+
+    &.block{
+        background:url(../img/ui/block.svg);
+        width:27px;
+        height:25px;
+        margin:.5rem 0;
+    }
+    &.epoch{
+        background:url(../img/ui/liveCluster.svg);
+        width:40px;
+        height:22px;
+        margin:.6rem 0;
+    }
+}
+
+.tableSpecificStyle{
+     table{
+         thead{
+            tr{
+                th{
+                    &:first-child{
+                        padding-left:0!important;
+                    }
+                }
+            }
+         }
+        tr{
+            td{
+                 white-space: break-spaces!important;
+                 &.text-muted{
+                    width:20%;
+                 }
+                &:first-child{
+                    width:60%!important;
+                    padding-left:0!important;
+                }
+            }
+        }
+     }
 }

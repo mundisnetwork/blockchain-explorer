@@ -34,6 +34,7 @@ import { TransactionHistoryCard } from "components/account/history/TransactionHi
 import { TokenTransfersCard } from "components/account/history/TokenTransfersCard";
 import { TokenInstructionsCard } from "components/account/history/TokenInstructionsCard";
 import { RewardsCard } from "components/account/RewardsCard";
+import { useHistory } from "react-router-dom";
 
 const IDENTICON_WIDTH = 64;
 
@@ -114,6 +115,7 @@ const TOKEN_TABS_HIDDEN = [
 
 type Props = { address: string; tab?: string };
 export function AccountDetailsPage({ address, tab }: Props) {
+  let history = useHistory();
   const fetchAccount = useFetchAccountInfo();
   const { status } = useCluster();
   const info = useAccountInfo(address);
@@ -133,6 +135,9 @@ export function AccountDetailsPage({ address, tab }: Props) {
   return (
     <div className="container mt-n3">
       <div className="header">
+        <>
+            <button className="backButton btn btn-white" onClick={() => history.goBack()}>Back</button>
+        </>
         <div className="header-body">
           <AccountHeader address={address} info={info} />
         </div>
@@ -299,7 +304,7 @@ function MoreSection({
   const data = account?.details?.data;
   return (
     <>
-      <div className="container">
+      <div className="container greyCard tableSpecificStyle ">
         <div className="header">
           <div className="header-body pt-0">
             <ul className="nav nav-tabs nav-overflow header-tabs">
@@ -317,7 +322,7 @@ function MoreSection({
             </ul>
           </div>
         </div>
-      </div>
+
       {tab === "tokens" && (
         <>
           <OwnedTokensCard pubkey={pubkey} />
@@ -332,6 +337,7 @@ function MoreSection({
       {tab === "vote-history" && data?.program === "vote" && (
         <VotesCard voteAccount={data.parsed} />
       )}
+      </div>
       {tab === "slot-hashes" &&
         data?.program === "sysvar" &&
         data.parsed.type === "slotHashes" && (
@@ -395,6 +401,5 @@ function getTabs(data?: ProgramData): Tab[] {
       path: "/tokens",
     });
   }
-
   return tabs;
 }

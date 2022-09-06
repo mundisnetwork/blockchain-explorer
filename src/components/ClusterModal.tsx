@@ -183,7 +183,7 @@ function ClusterToggle() {
         return (
           <Link
             key={index}
-            className={`btn col-12 mb-3 ${btnClass}`}
+            className={`btn col-12 mb-3 navBtn ${btnClass}`}
             to={clusterLocation}
           >
             {clusterName(net)}

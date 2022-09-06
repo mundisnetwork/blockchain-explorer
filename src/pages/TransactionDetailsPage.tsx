@@ -30,6 +30,7 @@ import { TokenBalancesCard } from "components/transaction/TokenBalancesCard";
 import { InstructionsSection } from "components/transaction/InstructionsSection";
 import { ProgramLogSection } from "components/transaction/ProgramLogSection";
 import { clusterPath } from "utils/url";
+import { useHistory } from "react-router-dom";
 
 const AUTO_REFRESH_INTERVAL = 2000;
 const ZERO_CONFIRMATION_BAILOUT = 5;
@@ -53,7 +54,7 @@ type AutoRefreshProps = {
 
 export function TransactionDetailsPage({ signature: raw }: SignatureProps) {
   let signature: TransactionSignature | undefined;
-
+  let history = useHistory();
   try {
     const decoded = bs58.decode(raw);
     if (decoded.length === 64) {
@@ -95,6 +96,9 @@ export function TransactionDetailsPage({ signature: raw }: SignatureProps) {
   return (
     <div className="container mt-n3">
       <div className="header">
+        <>
+            <button className="backButton btn btn-white" onClick={() => history.goBack()}>Back</button>
+        </>
         <div className="header-body">
           <h6 className="header-pretitle">Details</h6>
           <h2 className="header-title">Transaction</h2>
@@ -396,7 +400,7 @@ function AccountsCard({ signature }: SignatureProps) {
   });
 
   return (
-    <div className="card">
+    <div className="card greyCard">
       <div className="card-header">
         <h3 className="card-header-title">Account Input(s)</h3>
       </div>

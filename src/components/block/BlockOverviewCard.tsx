@@ -183,7 +183,7 @@ function MoreSection({
 }) {
   return (
     <>
-      <div className="container">
+      <div className="container greyCard">
         <div className="header">
           <div className="header-body pt-0">
             <ul className="nav nav-tabs nav-overflow header-tabs">
@@ -201,11 +201,11 @@ function MoreSection({
             </ul>
           </div>
         </div>
-      </div>
       {tab === undefined && <BlockHistoryCard block={block} />}
       {tab === "rewards" && <BlockRewardsCard block={block} />}
       {tab === "accounts" && <BlockAccountsCard block={block} />}
       {tab === "programs" && <BlockProgramsCard block={block} />}
+   </div>
     </>
   );
 }
