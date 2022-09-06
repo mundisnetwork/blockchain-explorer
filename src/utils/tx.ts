@@ -27,7 +27,7 @@ export enum PROGRAM_NAMES {
   SYSTEM = "System Program",
   VOTE = "Vote Program",
   SECP256K1 = "Secp256k1 Program",
-  ASSOCIATED_TOKEN = "Associated Token Program",
+  ASSOCIATED_TOKEN = "Token Account Program",
   FEATURE_PROPOSAL = "Feature Proposal Program",
   MEMO = "Memo Program",
   TOKEN = "Token Program",
@@ -104,10 +104,6 @@ export function programLabel(
   return LOADER_IDS[address];
 }
 
-export function tokenLabel(address: string): string | undefined {
-  return `Unknown token`;
-}
-
 export function addressLabel(
   address: string,
   cluster: Cluster
@@ -115,8 +111,7 @@ export function addressLabel(
   return (
     programLabel(address, cluster) ||
     SYSVAR_IDS[address] ||
-    SPECIAL_IDS[address] ||
-    tokenLabel(address)
+    SPECIAL_IDS[address]
   );
 }
 

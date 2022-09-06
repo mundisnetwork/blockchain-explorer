@@ -283,8 +283,7 @@ export type MoreTabs =
   | "transfers"
   | "instructions"
   | "rewards"
-  | "metadata"
-  | "domains";
+  | "metadata";
 
 function MoreSection({
   account,
@@ -394,11 +393,6 @@ function getTabs(data?: ProgramData): Tab[] {
       slug: "tokens",
       title: "Tokens",
       path: "/tokens",
-    });
-    tabs.push({
-      slug: "domains",
-      title: "Domains",
-      path: "/domains",
     });
   }
 
