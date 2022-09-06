@@ -34,7 +34,7 @@ export function SearchBar() {
 
   const resetValue = "" as any;
   return (
-    <div className="container main-title">
+    <div className="container main-title mb-5">
       <div className="row align-items-center justify-content-center">
         <h1 className="col text-center">
           MUNDIS <strong>BLOCKCHAIN EXPLORER</strong>

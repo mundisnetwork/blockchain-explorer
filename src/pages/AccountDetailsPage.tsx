@@ -135,12 +135,7 @@ export function AccountDetailsPage({ address, tab }: Props) {
   return (
     <div className="container mt-n3">
       <div className="header">
-        <>
-            <button className="backButton btn btn-white" onClick={() => history.goBack()}>Back</button>
-        </>
-        <div className="header-body">
-          <AccountHeader address={address} info={info} />
-        </div>
+        <AccountHeader address={address} info={info} history={history} />
       </div>
       {!pubkey ? (
         <ErrorCard text={`Address "${address}" is not valid`} />
@@ -154,9 +149,11 @@ export function AccountDetailsPage({ address, tab }: Props) {
 export function AccountHeader({
   address,
   info,
+  history
 }: {
   address: string;
   info?: CacheEntry<Account>;
+  history: any
 }) {
   const mintInfo = useMintAccountInfo(address);
   const account = info?.data;
@@ -185,10 +182,11 @@ export function AccountHeader({
   }
 
   return (
-    <>
-      <h6 className="header-pretitle">Details</h6>
-      <h2 className="header-title">Account</h2>
-    </>
+      <div className="header-body d-flex align-items-center">
+        <button className="backButton btn btn-sm btn-white" onClick={() => history.goBack()}>Back</button>
+        <h2 className="header-title ml-3">Account Details</h2>
+        <div className="icon block ml-5 mt-0 mb-0"></div>
+      </div>
   );
 }
 

@@ -26,19 +26,12 @@ export function BlockDetailsPage({ slot, tab }: Props) {
 
   return (
 
-    <div className="container mt-n3">.
-      <div className="header">
-        <>
-            <button className="backButton btn btn-white" onClick={() => history.goBack()}>Back</button>
-        </>
-        <div className="header-body d-flex">
-            <div>
-              <h6 className="header-pretitle">Details</h6>
-              <h2 className="header-title">Block</h2>
-             </div>
-          <div className="icon block ml-5"></div>
+    <div className="container">.
+        <div className="header-body d-flex align-items-center">
+            <button className="backButton btn btn-sm btn-white" onClick={() => history.goBack()}>Back</button>
+            <h2 className="header-title ml-3">Block Details</h2>
+            <div className="icon block ml-5 mt-0 mb-0"></div>
         </div>
-      </div>
       {output}
     </div>
   );

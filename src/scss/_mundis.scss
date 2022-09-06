@@ -626,6 +626,9 @@ p.updated-time {
 .ml-5{
     margin-left:2.5rem!important;
 }
+.ml-3{
+    margin-left:1.5rem!important;
+}
 
 //search icon
 .fe.fe-search{
@@ -674,7 +677,7 @@ p.updated-time {
             margin-bottom:2rem;
             .btn{
             padding:.5rem 1rem;
-            font-size:1.2rem;
+            font-size:0.9rem;
             font-weight:bold;
 
             }
@@ -690,7 +693,7 @@ p.updated-time {
                 text-transform:uppercase;
                 color:#fff;
                 font-weight:bold;
-                font-size:1rem;
+                font-size:0.85rem;
               &.active{
                     color:#fff;
                     background:$info;

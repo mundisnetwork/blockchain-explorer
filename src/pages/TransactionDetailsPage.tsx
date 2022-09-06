@@ -94,14 +94,12 @@ export function TransactionDetailsPage({ signature: raw }: SignatureProps) {
   }, [status, autoRefresh, setZeroConfirmationRetries]);
 
   return (
-    <div className="container mt-n3">
+    <div className="container">
       <div className="header">
-        <>
-            <button className="backButton btn btn-white" onClick={() => history.goBack()}>Back</button>
-        </>
-        <div className="header-body">
-          <h6 className="header-pretitle">Details</h6>
-          <h2 className="header-title">Transaction</h2>
+        <div className="header-body d-flex align-items-center">
+          <button className="backButton btn btn-sm btn-white" onClick={() => history.goBack()}>Back</button>
+          <h2 className="header-title ml-3">Transaction Details</h2>
+          <div className="icon block ml-5 mt-0 mb-0"></div>
         </div>
       </div>
       {signature === undefined ? (
